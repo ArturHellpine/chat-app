@@ -7,8 +7,8 @@ const Input = ({ type, placeholder, value, onChange, label }) => {
                 <span className='text-base label-text'>{label}</span>
             </label>
             <input
-                value={value}
-                onChange={onChange}
+                value={ value }
+                onChange={ onChange }
                 type={ type }
                 placeholder={ placeholder }
                 className='w-full input input-bordered h-10 placeholder:opacity-60'
