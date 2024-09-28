@@ -14,6 +14,10 @@ const MessageContainer = () => {
         return () => setSelectedConversation(null)
     }, [setSelectedConversation])
 
+    const closeChat = () => {
+        setSelectedConversation(null)
+    }
+
 
     return (
         <div className='md:min-w-[450px] flex flex-col'>
@@ -22,7 +26,7 @@ const MessageContainer = () => {
             ) : (
                 <>
                     <div className='px-2 py-2 mb-4 flex items-center'>
-                        <TiArrowLeft size={30} className='cursor-pointer text-gray-400' onClick={() => history.back()} />
+                        <TiArrowLeft size={30} className='cursor-pointer text-gray-400' onClick={closeChat} />
                         <span className='text-gray-300 text-[18px] pl-1'>{selectedConversation.fullName}</span>
                     </div>
                     <Messages />
